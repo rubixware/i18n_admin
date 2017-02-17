@@ -1,5 +1,6 @@
 module I18nAdmin
   class Engine < ::Rails::Engine
+    require 'jquery-rails'
     isolate_namespace I18nAdmin
 
     initializer 'i18n_admin.configure_i18n_backend' do
