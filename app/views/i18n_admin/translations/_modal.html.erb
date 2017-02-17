@@ -1,0 +1,30 @@
+<div id="locale_modal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><%= t('i18n_admin.translations.modal_title') %></h4>
+      </div>
+      <div class="modal-body">
+        <h3><%= t('i18n_admin.translations.modal_body') %></h3>
+        <p><%= current_locale %></p>
+        <div class="list-group">
+          <% @locales.each do |locale| %>
+            <% next if locale.eql?(current_locale) %>
+            <%= link_to translations_path(locale: locale), class: "list-group-item" do %>
+              <%= locale %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t('i18n_admin.translations.modal.close') %>
+        </button>
+        <button type="button" class="btn btn-primary">
+          <%= t('i18n_admin.translations.modal.submit') %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

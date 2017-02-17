@@ -14,13 +14,7 @@
               <%= t('i18n_admin.translations.choose_locale') %>
             </h2>
 
-            <div class="btn-group">
-              <% @locales.each do |locale| %>
-                <%= link_to translations_path(locale: locale), class: "btn btn-primary#{ ' active' if current_locale == locale }" do %>
-                  <%= locale %>
-                <% end %>
-              <% end %>
-            </div>
+            <%= link_to current_locale, "#", class: "btn btn-info", data: {toggle: :modal, target: :locale_modal} %>
           </div>
         </div>
       </div>
