@@ -6,7 +6,7 @@ module I18nAdmin
       @translations = @translations.search(params[:q]) if params[:q]
       @translations = @translations.page(params[:page]).per(60)
 
-      @locales = I18n.available_locales
+      @locales = I18n.available_locales.map(&:to_sym).uniq
     end
 
     def update
