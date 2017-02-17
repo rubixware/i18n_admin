@@ -15,6 +15,7 @@
 //= require jquery.autoGrow
 //= require turbolinks
 //= require bootstrap
+//= require bootstrap/modal.min
 //= require nprogress
 //= require nprogress-turbolinks
 //= require sidekiq-job_monitor
