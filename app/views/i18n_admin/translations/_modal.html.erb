@@ -9,7 +9,7 @@
         <h3><%= t('i18n_admin.translations.modal_body') %></h3>
         <p><%= current_locale %></p>
         <div class="list-group">
-          <% @locales.each do |locale| %>
+          <% locales.each do |locale| %>
             <% next if locale.eql?(current_locale) %>
             <%= link_to translations_path(locale: locale), class: "list-group-item" do %>
               <%= locale %>
