@@ -16,7 +16,6 @@
  *= require_self
  */
 
-@import "bootstrap";
 
 body {
   overflow: scroll;
@@ -85,4 +84,3 @@ td.input-cell textarea:focus {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
